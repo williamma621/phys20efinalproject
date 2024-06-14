@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulated Brightness Adjustment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id = 'flux_manager'>
+        <h1> Flux Simulator </h1>
+        <div id = 'luminosity_simulation'>
+            <h3> Simulate Flux with Luminosity </h4>
+            <select id = 'luminosityDefaults'>
+                <option> --Select Defaults-- </option>
+                <option> Sun </option>
+                <option> Moon </option>
+                <option> Sirius </option>
+                <option> Polaris </option>
+            </select>
+            <br><br>
+            <label for="luminosity">Luminosity:</label>
+            <input type="number" id="luminosity_input_box" required> <span> Watts </span>
+            <br><br>
+            <label for="distance">Distance:</label>
+            <input type="number" id="distance_input_box" required> <span> Meters </span>
+            <br>
+            <u><p id = 'learn_more'> Learn More </p></u>
+            <div id = 'about_luminosity'>
+                <p> Luminosity measures the Power of an object emitting light, and flux measures the density of light power another object recieves.</p>
+                <p> The further the object emitting the light, the lesser light is recieved, which means lower Flux</p>
+                <p> To calculate the Flux an object recieves, we have the equation: </p>
+                <p> Flux = Luminosity / (4 x Pi x Distance) </p>
+                <p> Current Flux Simulated: <span id="flux1"></span> W/m<sup>2</sup> </p>
+            </div>
+        </div>
+
+        <div id = 'black_body_simulation'>
+            <h3> Simulate Flux with Black Body </h4>
+                <select id = 'blackBodyDefaults'>
+                    <option> --Select Defaults-- </option>
+                    <option> Sun </option>
+                    <option> Moon </option>
+                    <option> Sirius </option>
+                    <option> Polaris </option>
+                </select>
+                <br>
+                <br>
+                <label for="Temperature">Temperature:</label>
+                <input type="number" id="temperature_input_box" required> <span> Kelvin </span>
+                <br><br>
+                <label for="Radius">Radius:</label>
+                <input type="number" id="radius_input_box" required> <span> Meters </span>
+                <br><br>
+                <label for="distance">Distance:</label>
+                <input type="number" id="distance_input_box_2" required> <span> Meters </span>
+                <br>
+                <u><p id = 'learn_more_2'> Learn More </p></u>
+                <div id = 'about_black_bodies'>
+                    <p> A Black Body is something that absorbs all energy falling on it, many stars are almost perfect black bodies </p>
+                    <p> For Black bodies that emits lights, we can know the Luminosity of the light by knowing the Temperature and Radius of the Black Body</p>
+                    <p> To calculate the Luminosity knowing the Temperature and Radius, we have the equation: </p>
+                    <p> Luminosity = 5.67 * 10<sup>8</sup> * Temperature<sup>4</sup> * 4 * Pi * Radius<sup>2</sup></p>
+                    <p> Knowing the Luminosity, if we also our distance from the Black Body, we would be able to know how much Flux the Black Body exerts on us</p>
+                    <p> Current Flux Simulated: <span id="flux2"></span> W/m<sup>2</sup> </p>
+                </div>
+        </div>
+
+    </div>
+    
+    <div id = 'image_manager'>
+        <div id = 'image_chooser'>
+            <div id = 'choose_image'>
+                <p> Select Image </p>
+                <select id = 'image_choosing_methods'>
+                    <option> --Choose A Method-- </option>
+                    <option> Website Url </option>
+                    <option> Upload </option>
+                    
+                    <!-- <option> Use Defaults </option> -->
+
+                    <input type="file" id="uploadInput" accept="image/*">
+                    <input type="text" id="urlInput">
+                </select>
+            </div>
+
+            <div id = 'choose_default_flux'>
+                <p> Enter the original lightning on the photo</p>
+                <select id = 'image_choosing_flux'>
+                    <option> --Choose A Flux-- </option>
+                    <option> Sunlight </option>
+                    <option> Moonlight </option>
+                    <option> Enter a custom flux value in W/m^2 </option>
+                </select>
+
+                <input type="text" id="fluxInput">
+            </div>
+        </div>
+        
+        <div id = 'image_display'>
+            <img id = 'uploadedImage' src = '', alt="Image Display">
+        </div>
+    
+    </div>
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    background-image: url('Webb_inspects_NGC_346-m-2000x1200.jpg');
+    color: white;
+}
+div{
+    border: 10px;
+    border-color: white;
+}
+#flux_manager {
+    width: 30%;
+    height: 105vh;
+    border-style: none solid none none;
+    border-width: 1px;
+    border-color: white;
+}
+#luminosity_simulation {
+    width: 100%;
+    border-style: solid none solid none;
+    border-width: 1px;
+    border-color: white;
+}
+#about_luminosity {
+    display: none;
+}
+#about_black_bodies {
+    display: none;
+}
+#image_manager {
+    width: 70%;
+    border-style: none none none solid;
+    border-width: 1px;
+    border-color: white;
+
+}
+#image_chooser {
+    height: 15%;
+    width: 100%;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: white;
+    padding: 20px;
+}
+#choose_image {
+    padding: 10px;
+    display: flex;
+}
+#choose_image * {
+    margin: 10px;
+}
+#uploadInput {
+    display: none;
+}
+#urlInput{
+    display: none;
+}
+#choose_default_flux{
+    padding: 10px;
+    display: flex;
+}
+#choose_default_flux * {
+    margin: 10px;
+}
+#fluxInput{
+    display: none;
+}
+#image_display {
+    height: 50%;
+    width:100%;
+    font-size: 50px;
+    text-align: center;
+}
+#placeholder {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 30px;
+}
+img {
+    transition: filter 0.5s ease;
+    width: 100%;
+}
